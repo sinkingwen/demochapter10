@@ -1,27 +1,32 @@
-<template>
+<!-- <template>
   <div>
-    <input :value="title" @input="handleInput" />
+    <input type="text" :value="title" @input="handleInput" />
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      default: ''
-    }
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    default: "default title",
   },
-  emits: ['update:title'],
-  methods: {
-    handleInput(event) {
-      this.$emit('update:title', event.target.value);
-    }
-  }
+});
+const emit = defineEmits(["update:title"]);
+function handleInput(event) {
+  emit("update:title", event.target.value);
 }
+</script> -->
+
+<!-- CustomInput.vue -->
+<script setup>
+const title = defineModel('title')
 </script>
+
+<template>
+  <input type="text" v-model="title" />
+</template>
 <style scoped>
-input{
+input {
   width: 200px;
   height: 30px;
 }
