@@ -21,6 +21,7 @@ const title = ref('Hello, World')
 </script>
 
 <template>
-  <CustomInput v-model:title="title" />
+  <CustomInput v-model="title" />
+  <!-- <CustomInput v-model:title="title" /> -->
   <h1>{{ title }}</h1>
 </template>

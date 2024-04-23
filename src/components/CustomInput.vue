@@ -19,7 +19,9 @@ function handleInput(event) {
 
 <!-- CustomInput.vue -->
 <script setup>
-const title = defineModel('title')
+// defineModel() 返回的值是一个 ref,
+// 作用是在父组件和当前变量之间进行双向绑定
+const title = defineModel()
 </script>
 
 <template>
@@ -31,3 +33,14 @@ input {
   height: 30px;
 }
 </style>
+
+<!-- 组件上的 v-model 也可以接受一个参数 -->
+<!-- <script setup>
+// defineModel() 返回的值是一个 ref,
+// 作用是在父组件和当前变量之间进行双向绑定
+const title = defineModel('title')
+</script>
+
+<template>
+  <input type="text" v-model="title" />
+</template> -->
