@@ -1,5 +1,5 @@
 <script setup>
-// import ButtonCounter from "./components/ButtonCounter.vue";
+import ButtonCounter from "./components/ButtonCounter.vue";
 //异步组件，引入defineAsyncComponent
 import { defineAsyncComponent} from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
@@ -9,9 +9,9 @@ import CardComponent from "./components/CardComponent.vue";
 import ModelView from '@/components/ModelView.vue'
 import { ref } from "vue";
 // 异步组件
-const ButtonCounter = defineAsyncComponent(() =>
-  import("@/components/ButtonCounter.vue")
-);
+// const ButtonCounter = defineAsyncComponent(() =>
+//   import("@/components/ButtonCounter.vue")
+// );
 
 const posts = ref([
   { id: 1, title: "My journey with Vue" },
